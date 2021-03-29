@@ -1,0 +1,27 @@
+{
+  "name": "@stacker/generator-react-web",
+  "version": "1.0.0",
+  "description": "最佳实践",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "beeper": "^2.1.0",
+    "boxen": "^5.0.0",
+    "chalk": "^4.1.0",
+    "download-git-repo": "^3.0.2",
+    "ora": "^5.4.0",
+    "path": "^0.12.7",
+    "update-notifier": "^5.1.0",
+    "yeoman-generator": "^5.2.0"
+  },
+  "engines": {
+    "node": ">=12.20.0",
+    "yarn": ">=1.16.0"
+  }
+}
