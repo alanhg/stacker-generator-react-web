@@ -131,7 +131,7 @@ module.exports = class extends Generator {
     });
   }
 
-  _askForDir() {
+  askForDir() {
     const opts = [{
       type: 'input',
       name: 'dirName',
@@ -151,7 +151,7 @@ module.exports = class extends Generator {
     });
   }
 
-  _askForOverwrite() {
+  askForOverwrite() {
     const destination = this.destinationPath();
     const dirName = this.dirName;
     if (!fs.existsSync(path.resolve(destination, dirName))) {
@@ -169,13 +169,13 @@ module.exports = class extends Generator {
     return this.prompt(opts).then(({overwrite}) => {
       if (!overwrite) {
         this.dirName = DEFAULT_DIR;
-        return this._askDirFlow();
+        return this.askDirFlow();
       }
     });
   }
 
-  _askDirFlow() {
-    return this._askForDir().then(this._askForOverwrite);
+  askDirFlow() {
+    return this.askForDir().then(this.askForOverwrite);
   }
 
   /**
@@ -187,7 +187,7 @@ module.exports = class extends Generator {
     const done = this.async();
 
     this._askForAppType()
-      .then(this._askDirFlow)
+      .then(this.askDirFlow)
       .then(done);
   }
 

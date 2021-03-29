@@ -27,7 +27,7 @@
     "ora": "^5.4.0",
     "path": "^0.12.7",
     "update-notifier": "^5.1.0",
-    "yeoman-generator": "^5.2.0"
+    "yeoman-generator": "4.13.0"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^8.3.4",
