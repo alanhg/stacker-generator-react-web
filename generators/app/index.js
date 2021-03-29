@@ -209,7 +209,7 @@ module.exports = class extends Generator {
   _downloadTemplate(repository) {
     return new Promise((resolve, reject) => {
       const dirPath = this.destinationPath(this.dirName, '.tmp');
-      download(repository, dirPath, err => err ? reject(err) : resolve());
+      download(repository, dirPath, null, err => err ? reject(err) : resolve());
     });
   }
 
